@@ -1,0 +1,17 @@
+services:
+  go_vault:
+    container_name: go_vault
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "54625:54625"
+    environment:
+      - VAULT_ADDR=http://vault:8200
+      - VAULT_TOKEN=hvs.NZfqP0cl2HGoUQfvTJUln0Qn
+    networks:
+      - homelabs
+
+networks:
+  homelabs:
+    external: true

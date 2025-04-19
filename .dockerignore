@@ -1,0 +1,29 @@
+# Binaries
+app
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Build output
+/build
+/bin
+/dist
+
+# Go cache & modules
+/pkg
+
+# VCS
+.git
+.gitignore
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor configs
+*.swp
+*.swo
+*.idea/
+.vscode/
