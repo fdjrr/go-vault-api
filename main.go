@@ -145,7 +145,7 @@ func getKey(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/generatKey", generateKey)
+	http.HandleFunc("/generateKey", generateKey)
 	http.HandleFunc("/getKey", getKey)
 
 	log.Println("Server running at http://localhost:54625")
