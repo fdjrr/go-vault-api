@@ -3,16 +3,20 @@
 ## API Endpoint
 
 ```bash
+
+# Generate Private Key & Public Key
+
 POST /generateKey
 
 {
-    "path": "fadjrir"
+    "path": "/kv/data/fadjrir"
 }
 
+# Get Private Key & Public Key
 
 POST /getKey
 
 {
-    "path": "fadjrir"
+    "path": "/kv/data/fadjrir"
 }
 ```
