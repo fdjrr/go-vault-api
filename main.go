@@ -22,7 +22,7 @@ type VaultPathRequest struct {
 	Path string `json:"path"`
 }
 
-func generateKeyPair(w http.ResponseWriter, r *http.Request) {
+func generateKey(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
@@ -92,7 +92,7 @@ func generateKeyPair(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-func getKeyPair(w http.ResponseWriter, r *http.Request) {
+func getKey(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
@@ -145,8 +145,8 @@ func getKeyPair(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/generate-rsa", generateKeyPair)
-	http.HandleFunc("/get-rsa", getKeyPair)
+	http.HandleFunc("/generatKey", generateKey)
+	http.HandleFunc("/getKey", getKey)
 
 	log.Println("Server running at http://localhost:54625")
 	log.Fatal(http.ListenAndServe(":54625", nil))
